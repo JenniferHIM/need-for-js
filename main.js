@@ -44,7 +44,7 @@ function startGame() {
         enemy.y = -100 * setting.traffic * (i + 1);
         enemy.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
         enemy.style.top = enemy.y + 'px';
-        enemy.style.background = 'transparent url(./image/car1.png) center / cover no-repeat;';
+        enemy.style.background = 'transparent url(./image/enemy2.png) center / cover no - repeat';
         gameArea.appendChild(enemy);
     }
 
@@ -123,9 +123,10 @@ function moveEnemy() {
             carRect.bottom >= enemyRect.top) {
             setting.start = false;
             console.warn('ДТП');
-            start.classList.remove('.hide');
+            start.classList.remove('hide');
             score.style.top = start.offsetHeight;
         }
+        
         item.y += setting.speed / 2;
         item.style.top = item.y + 'px';
 
